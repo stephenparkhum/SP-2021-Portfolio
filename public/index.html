@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP Portfolio | 2021</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <!-- Header -->
+    <nav class="navbar">
+        <h1 class="brand">Stephen Parker // <span class="highlight">Full Stack Developer</span></h1>
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="links-container">
+            <li class="links-item"><a href="#" class="link active">home</a></li>
+            <li class="links-item"><a href="#about-section" class="link">about</a></li>
+            <li class="links-item"><a href="#project-section" class="link">projects</a></li>
+            <li class="links-item"><a href="mailto:stephenparkhum@outlook.com" class="link" target="_blank">contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home section -->
+    <section class="home">
+        <div class="hero-content">
+            <h1 class="hero-heading">
+                <span class="highlight">hi, </span> I'm Stephen
+            </h1>
+            <p class="profession">full stack developer</p>
+            <p class="info">
+                I'm a Portland based Full-Stack Developer who is skilled in writing, clean, and scalable code.    
+            </p>
+            <a href="mailto:stephenparkhum@outlook.com" target="_blank" class="btn">
+                contact
+            </a>
+        </div>
+        <img class="image" src="./img/Me_profilepic.jpeg" alt="Stephen's face">
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about-section">
+        <h2 class="heading">
+            about <span class="highlight">me</span>
+        </h2>
+        <div class="separator"></div>
+        <div class="about-me-container">
+            <div class="left-col">
+            <!-- image here ? -->
+                <img src="./img/Me_Bathroom.jpg" class="about-image" alt="" srcset="">
+            </div>
+            <div class="right-col">
+                <p class="about-para">
+                    I’m a Portland, Oregon-based web developer who has a passion for creating pixel-perfect experiences that serve every type of user, no matter their ability, interest, or choice of device. Due to the ever-changing terrain of the tech landscape, I believe that an excellent web developer must take an ‘always-learning’ approach to new technologies and collaborations.
+                </p>
+                <a href="https://standardresume.co/r/sparkerwebdev" target="_blank" class="btn">download resume</a>
+            </div>
+        </div>
+        <h2 class="heading">languages & frameworks</h2>
+        <div class="separator"></div>
+        <div class="skill-container">
+            <div class="skill-card" style="--bg: #f06529">
+                <p class="skill">HTML</p>
+            </div>
+            <div class="skill-card" style="--bg: #FCDC00">
+                <p class="skill">JavaScript</p>
+            </div>
+            <div class="skill-card large" style="--bg: #61DAFB">
+                <p class="skill">React</p>
+            </div>
+            <div class="skill-card large" style="--bg: #bf4080">
+                <p class="skill">SCSS</p>
+            </div>
+            <div class="skill-card" style="--bg: #264de4">
+                <p class="skill">CSS</p>
+            </div>
+            <div class="skill-card" style="--bg: #ff2d20">
+                <p class="skill">Laravel</p>
+            </div>
+            <div class="skill-card" style="--bg: #83cd29">
+                <p class="skill">NodeJS</p>
+            </div>
+            <div class="skill-card large" style="--bg: #3178C6">
+                <p class="skill">TypeScript</p>
+            </div>
+            <div class="skill-card" style="--bg: #8892BF">
+                <p class="skill">PHP</p>
+            </div>
+            <div class="skill-card" style="--bg: #0678BE">
+                <p class="skill">Drupal</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- project section -->
+    <section class="project" id="project-section">
+        <h2 class="heading">
+            my <span class="highlight">projects</span>
+        </h2>
+        <p class="sub-heading">
+            Check out some of my work below
+        </p>
+        <div class="separator"></div>
+        <div class="filters">
+            <button class="filter-btn active" id="all">all</button>
+            <button class="filter-btn" id="javascript">javascript</button>
+            <button class="filter-btn" id="fullstack">fullstack</button>
+            <button class="filter-btn" id="typescript">typescript</button>
+            <button class="filter-btn" id="react">React</button>
+            <button class="filter-btn" id="drupal">Drupal</button>
+        </div> 
+        
+
+        <div class="project-container">
+        </div>
+    </section>
+
+    <script src="projects.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

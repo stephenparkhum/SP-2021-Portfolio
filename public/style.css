@@ -1,0 +1,483 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: #fff;
+    --dark-grey: #1d1d1d;
+    --mid-grey: #464646;
+    --light-grey: #e3e3e3e3;
+    --accent: #ff3559;
+    --opacity: 0.7;
+    --transition: .5s;
+    --b-radius: 5px;
+    --b-radous-md: 10px;
+    --b-radius-lg: 50%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    position: relative;
+    background: var(--dark-grey);
+    color: var(--text-color);
+    font-family: 'Roboto', serif;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 60px; 
+    background: var(--dark-grey);
+    display: flex;
+    padding: 0 10vw;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.brand {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.links-container {
+    display: flex;
+    list-style-type: none;
+}
+
+.link {
+    text-transform: capitalize;
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px; 
+    padding: 10px; 
+    position: relative;
+}
+
+.link:hover:not(.active) {
+    opacity: var(--opacity);
+}
+
+.link.active::before, 
+.separator::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: var(--b-radius-lg);
+    background-color: var(--text-color);
+}
+
+.link.active::after,
+.separator::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-color);
+}
+
+/* home section */
+.home {
+    width: 100%;
+    min-height: calc(100vh - 60px);
+    height: auto;
+    margin-top: 50px;
+    padding: 0 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hero-content {
+    width: 50%;
+}
+
+.hero-heading{
+    font-size: 5rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.profession {
+    width: fit-content;
+    display: block;
+    margin: 10px 0 20px;
+    margin-left: auto;
+    text-transform: capitalize;
+    position: relative;
+    padding: 10px 20px; 
+    color: var(--dark-grey);
+    z-index: 999;
+}
+
+.profession::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--light-grey);
+    z-index: -1;
+    transform: skewX(10deg); 
+}
+
+.profession::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100px;
+    width: 100px;
+    height: 2px;
+    background: var(--light-grey);
+}
+
+.info {
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    background: var(--accent);
+    color: var(--text-color);
+    text-transform: capitalize;
+    border: none;
+}
+
+/* about section */
+.about {
+    width: 100%;
+    height: auto;
+    padding: 50px 10vw;
+}
+
+.heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1rem;
+    margin: 10px;
+    opacity: var(--opacity);
+}
+
+.separator {
+    width: 25%;
+    margin: 20px auto;
+    position: relative;
+}
+
+.about-me-container {
+    margin: 150px 0 100px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.about-me-container .left-col img {
+    width: 300px;
+}
+
+.left-col, .right-col {
+    position: relative;
+}
+
+.about-image {
+    border-radius: var(--b-radous-md);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.about-para {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 35px;
+    margin-bottom: 40px;
+}
+
+/* SKILLS */
+.skill-container {
+    position:relative;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.skill-card {
+    height: 200px;
+    border-radius: var(--b-radous-md);
+    border: 1px solid var(--mid-grey);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.skill {
+    font-size: 2rem;
+    color: var(--mid-grey);
+    line-height: 200px;
+}
+
+.skill-card:hover {
+    background-color: var(--bg); 
+}
+
+.skill-card:hover .skill {
+    color: var(--text-color);
+}
+
+
+.skill-card.large {
+    grid-column: 2 span;
+}
+
+/* Project Section */
+.project {
+    position: relative;
+    padding: 50px 10vw;
+}
+
+.filters {
+    width: fit-content;
+    display: block;
+    margin: 100px auto;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border-radius: var(--b-radius);
+    border: none;
+    text-transform: capitalize;
+    margin: 0 5px 10px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: var(--text-color);
+}
+
+/* Project Section */
+.project-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.project-card {
+    position: relative;
+    cursor: pointer;
+    display: block;
+    color: var(--text-color);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-card .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, var(--opacity));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    text-transform: capitalize;
+    opacity: 0;
+}
+
+.project-name {
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-align: center;
+} 
+
+.tags {
+    position: absolute;
+    bottom: 20px;
+    opacity: 0.6;
+    witdh: 90%;
+}
+
+.project-card:hover .content {
+    opacity: 1;
+}
+
+.project-card.hide {
+    display: none;
+}
+
+/* Tablet View */
+@media (max-width: 996px) {
+    html {
+        font-size: 14px;
+    }
+    
+    /* toggle btn */
+    .toggle-btn {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        right: 10vw;
+        cursor: pointer;
+    }
+
+    .toggle-btn span {
+        position: absolute;
+        width: 100%;
+        height: 2px; 
+        background: var(--text-color);
+        top: 30%;
+        transition: var(--transition);
+    }
+    
+    .toggle-btn span:nth-child(2) {
+        top: 70%;
+    }
+
+    .toggle-btn.active span:nth-child(1) {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    .toggle-btn.active span:nth-child(2) {
+        top: 50%;
+        transform: rotate(-45deg);
+    }
+    
+    .links-container {
+        position: absolute;
+        top: 60px;
+        background: var(--dark-grey);
+        width: 100%;
+        left: 0;
+        padding: 0 10vw;
+        flex-direction: column;
+        transition: var(--transition);
+        opacity: 0;
+    }
+
+    .links-container.show {
+        opacity: 1;
+    }
+
+    .link {
+        margin-left: auto;
+        text-align: center;
+        display: block;
+        height: 50px;
+    }
+    
+
+    /* Home Section */
+
+    .home {
+        flex-direction: column-reverse;
+        height: fit-content;
+        padding-bottom: 50px;
+    }
+
+    .home .image {
+        width: 250px;
+        margin: 40px;
+    }
+    
+    .hero-content {
+        width: 70%;
+        min-width: 350px;
+        text-align: center;
+    }
+
+    .hero-heading {
+        font-size: 4.5rem;
+    }
+
+    /* about section */
+    .about-me-container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-col {
+        margin: auto;
+        width: 50%;
+        min-width: 320px;
+    }
+
+    .skill-container, .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skill-card {
+        grid-column: 1 span !important;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 500px) {
+    html { 
+        font-size: 12px;
+    }
+
+    p,
+    .sub-heading, 
+    .about-para, 
+    .left-col::before, 
+    .tags {
+        font-size: 1.4rem;
+    }
+
+    .about-image {
+        width: 90%;
+        margin: auto;
+        display: block;
+    }
+
+    .skill-container, 
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skill {
+        font-size: 2.5rem;
+    }
+
+    .project-name {
+        font-size: 3rem;
+    }
+
+}
